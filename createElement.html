@@ -11,7 +11,8 @@
   <!-- React, ReactDOM -->
   <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-  <script type="text/javascript">
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
     console.log(React);
     console.log(ReactDOM);
 
@@ -55,20 +56,15 @@
 
     // 4. 복잡한 리액트 엘리먼트 모임
     ReactDOM.render(
-      React.createElement(
-        "div", 
-        null, 
-        React.createElement(
-          "div", 
-          null, 
-          React.createElement("h1", null, "주제"),
-          React.createElement(
-            "ul", 
-            null, 
-            React.createElement("li", null, "React"),
-            React.createElement("li", null, "Vue")
-          )
-      ),
+        <div>
+          <div>
+            <h1>주제</h1>
+            <ul>
+              <li>React</li>
+              <li>Vue</li>
+            </ul>
+          </div>
+        </div>,
       document.querySelector('#root')
     )
   </script>
