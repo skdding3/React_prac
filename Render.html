@@ -8,7 +8,6 @@
 </head>
 <body>
   <div id="root"></div>
-  <!-- React, ReactDOM -->
   <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -16,18 +15,18 @@
     console.log(React);
     console.log(ReactDOM);
 
+    function Component(props) {
+      return (
+        <div>
+          <h1>{props.message} 함수로 만든 컴포넌트</h1>
+        </div>
+      );
+    }
+
     ReactDOM.render(
-      <div>
-          <div>
-            <h1>주제</h1>
-            <ul>
-              <li>React</li>
-              <li>Vue</li>
-            </ul>
-          </div>
-        </div>,
+      <Component message='렌더 테스트' />, 
       document.querySelector('#root')
-    );
+      );
   </script>
 </body>
 </html>
