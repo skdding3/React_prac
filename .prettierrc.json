@@ -1,0 +1,8 @@
+// Prettier
+
+// 코드 품질을 위해 사용하는 ESLint와는 다르게 사용자의 옵션에 다라 코드 스타일을 이쁘게 맞춰준다.
+// https://prettier.io/
+
+{
+  "singleQuote": true // 따옴표를 ''로 정리하게 만드는 설정
+}
